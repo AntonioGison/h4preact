@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:wght@500&family=Source+Code+Pro&display=swap');
+
+
+nav{
+    background-color: #09062A;
+    height: 5.5rem;
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 16%;
+}
+
+.right{
+    display: flex;
+    margin-left: 30%;
+}
+
+/* Tablet */
+@media screen and (max-width: 1250px) {
+    
+    .logo{
+        margin-left: 10%;
+    }
+    
+    .right {
+        margin-left: 10%;
+    }
+
+  }
+
+/* Mobile */
+  @media screen and (max-width: 850px) {
+    
+    .logo{
+        margin-left: 3%;
+    }
+    
+    .right {
+        margin-right: 30%;
+        margin-left: 15%;
+    }
+
+    .mobilebutton{
+        display: block!important;
+    }
+
+    button{
+        margin-right: 10px;
+    }
+
+    .passcontainer,input, .passcontainer a{
+        display: none;
+    }
+
+  }
+
+
+input{
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    text-align: left;
+    height: 1.8rem;
+    width: 14rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.passcontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.passcontainer a{
+    margin-left: 10px;
+    margin-top: 5px;
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button {
+    margin-bottom: 5px;
+    font-family: 'Kanit', sans-serif;
+    background-color: #9842F4;
+    color: white;
+    height: 38px;
+    width: 90px;
+    font-size: 20px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 1px;
+}
+
+.mobilebutton{
+    display: none;
+    background-color: #FFBE06;
+    color: #000000;
+}
