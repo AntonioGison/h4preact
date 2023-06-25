@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+h2{
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3em;
+}
+
+h3{
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5em;
+}
+
+p {
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.how_left{
+    width: 300px;
+}
+
+.how_right{
+    width: 350px;
+}
+
+.how_container{
+    margin-top: 0;
+    background-color: #25215A;
+    height: auto;
+    padding: 5% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.how_fix_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.how_co_container{
+    width: 100%;
+    display: flex;
+    gap: 19%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.co_co_container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.co_co_co_container{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+
+.co_co_co_container  img{
+    width: 300px;
+}
+
+.co_co_co_container  div{
+    width: 300px;
+}

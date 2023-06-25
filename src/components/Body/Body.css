@@ -7,7 +7,9 @@
     background-color: #e72e80;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10%;
+    padding: 5% 0%;
 }
 
 .font{
@@ -32,7 +34,7 @@
     color: #333;
     background-color: #FFBE06;
     border: 0px;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Kanit', sans-serif;
     box-shadow: none;
     font-weight: bold;
     font-size: 1em;
@@ -124,7 +126,7 @@
    .nav_right{
         margin-left: 8%;
     }
-    
+
     .background {
         height: 50vh;
     }
