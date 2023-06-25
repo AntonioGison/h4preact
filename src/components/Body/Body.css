@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+.background{
+    background-image: url("./first_bg.svg");
+    height: 75vh;
+    width: 100%;
+    background-color: #e72e80;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.font{
+    color: white;
+    font-size: 3em;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.body_input{
+    border: 0px;
+    margin-right: 10px;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    width: 15em;
+    height: 2.2em;
+
+}
+
+.body_btn_yellow{
+    color: #333;
+    background-color: #FFBE06;
+    border: 0px;
+    font-family: 'Space Grotesk', sans-serif;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 1em;
+    width: 28.5em;
+    height: 3em;
+}
+
+.body_terms{
+    color: white;
+    padding: 20px 0px;
+}
+
+.body_input::placeholder { 
+    color: white;
+  }
+
+
+.body_social{
+    display: flex;
+    padding: 10px 0px;
+    margin-top: 10px;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.body_social_text{
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.body_before{
+    margin-left: 0;
+    height: 1px;
+    width: 10em;
+    border-bottom: 1px white solid;
+}
+
+.body_after{
+    height: 1px;
+    width: 10em;
+    border-bottom: 1px white solid;
+}
+
+.body_social_icons{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.body_social_icons img{
+    width: 150px;
+    height: 50px;
+}
+
+  /* Tablet */
+@media screen and (max-width: 1250px) {
+   
+    .body_hero{
+        width: 40%;
+    }
+
+  }
+
+/* Mobile */
+  @media screen and (max-width: 850px) {
+    
+    .body_hero{
+        width: 70%;
+    }
+
+    .body_right{
+        display: none;
+    }
+
+    .background{
+        height: 80vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 400px) {
+    
+   .nav_right{
+        margin-left: 8%;
+    }
+    
+    .background {
+        height: 50vh;
+    }
+  }

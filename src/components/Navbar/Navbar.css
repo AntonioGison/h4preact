@@ -7,13 +7,15 @@ nav{
     display: flex;
     padding: 0.5rem 1rem;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
-.logo{
+.nav_logo{
     margin-left: 16%;
 }
 
-.right{
+.nav_right{
     display: flex;
     margin-left: 30%;
 }
@@ -21,11 +23,11 @@ nav{
 /* Tablet */
 @media screen and (max-width: 1250px) {
     
-    .logo{
+    .nav_logo{
         margin-left: 10%;
     }
     
-    .right {
+    .nav_right {
         margin-left: 10%;
     }
 
@@ -34,48 +36,48 @@ nav{
 /* Mobile */
   @media screen and (max-width: 850px) {
     
-    .logo{
+    .nav_logo{
         margin-left: 3%;
     }
     
-    .right {
+    .nav_right {
         margin-right: 30%;
-        margin-left: 15%;
+        margin-left: 25%;
     }
 
-    .mobilebutton{
+    .nav_mobilebutton{
         display: block!important;
     }
 
-    button{
+    .nav_button{
         margin-right: 10px;
     }
 
-    .passcontainer,input, .passcontainer a{
+    .nav_passcontainer,.nav_input, .nav_passcontainer a{
         display: none;
     }
 
   }
 
 
-input{
+.nav_input{
     margin: 1rem 0.5rem 0rem 0.5rem;
     text-align: left;
     height: 1.8rem;
     width: 14rem;
 }
 
-.container{
+.nav_container{
     display: flex;
     align-items: center;
 }
 
-.passcontainer{
+.nav_passcontainer{
     display: flex;
     flex-direction: column;
 }
 
-.passcontainer a{
+.nav_passcontainer a{
     margin-left: 10px;
     margin-top: 5px;
     color: #999;
@@ -83,7 +85,7 @@ input{
     font-size: 14px;
 }
 
-button {
+.nav_button {
     margin-bottom: 5px;
     font-family: 'Kanit', sans-serif;
     background-color: #9842F4;
@@ -96,8 +98,16 @@ button {
     border-radius: 1px;
 }
 
-.mobilebutton{
+.nav_mobilebutton{
     display: none;
     background-color: #FFBE06;
     color: #000000;
+    margin-bottom: 5px;
+    font-family: 'Kanit', sans-serif;
+    height: 38px;
+    width: 90px;
+    font-size: 20px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 1px;
 }
