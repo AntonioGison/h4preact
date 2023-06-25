@@ -26,13 +26,13 @@ function Howitworks() {
           </div>
         </div>
         <div className="co_co_co_container">
-          
+
           <div>
             <img
               src={require("./step1.svg").default}
               alt="Here for pizza Badge"
             ></img>
-            <h3>Step 1</h3>
+            <h3 className="space">Step 1</h3>
             <p>Add the attended hackathon to your collection with all the information you want</p>
           </div>
 
@@ -41,7 +41,7 @@ function Howitworks() {
               src={require("./step2.svg").default}
               alt="Here for pizza Badge"
             ></img>
-            <h3>Step 2</h3>
+            <h3 className="space">Step 2</h3>
             <p>Unlock and collect badges!</p>
           </div>
 
@@ -50,7 +50,7 @@ function Howitworks() {
               src={require("./step3.svg").default}
               alt="Here for pizza Badge"
             ></img>
-            <h3>Step 3</h3>
+            <h3 className="space">Step 3</h3>
             <p>Share your profile with friends, family and potential Big tech willing to hire you!</p>
           </div>
 
