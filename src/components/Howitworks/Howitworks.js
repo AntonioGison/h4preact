@@ -12,7 +12,7 @@ function Howitworks() {
             <p>it's like Linkedin but with Hackathons</p>
           </div>
 
-          <div className="co_co_container">
+          <div className="co_co_container hidden">
             <div>
               <img
                 src={require("./location_pin.svg").default}

@@ -18,6 +18,9 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
+.hidden{
+    visibility: hidden;
+}
 
 .how_left{
     width: 300px;
