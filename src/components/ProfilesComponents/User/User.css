@@ -2,12 +2,51 @@
 
 .user_container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 70%;
-    height: 20%;
-
+    height: 45vh;
     background-color: var(--dark-blue);
 }
+
+.user_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.padding60 {
+    padding-top: 60px;
+}
+
+.user_img {
+    padding: 10px 30px 10px 30px;
+    width: 150px;
+    height: 150px;
+}
+
+
+.lilla {
+    color: #8883CC;
+}
+
+.bio {
+    padding: 0px 30px 10px 30px;
+}
+
+.spostati {
+    margin-left: 30%;
+}
+
+.user_icons {
+    padding-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+   
+    .spostati {
+        margin-left: 8%;
+    }
+
+  }

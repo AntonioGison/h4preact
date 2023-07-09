@@ -5,6 +5,7 @@ import User from '../ProfilesComponents/User/User'
 import Performance from '../ProfilesComponents/Performance/Performance'
 import Badges from '../ProfilesComponents/Badges/Badges'
 import HackathonsList from '../ProfilesComponents/HackathonsList/HackathonsList'
+import Footer from '../Footer/Footer'
 
 function Profile() {
   return (
@@ -15,6 +16,7 @@ function Profile() {
     <Badges />
     </div>
     <HackathonsList />
+    <Footer />
     </main>
   )
 }
