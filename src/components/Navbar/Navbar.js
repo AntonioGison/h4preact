@@ -1,21 +1,24 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav>
-      <a href="changeitlater" className="nav_logo">
+  
+      <Link to="/" className="nav_logo">
         <img src={require("./logo.svg").default} alt="Hack4Pizza" />
-      </a>
+      </Link>
       <div className="nav_right">
         <input className="nav_input" type="email" placeholder="Enter Email address" />
 
         <div className="nav_container">
           <div className="nav_passcontainer">
             <input className="nav_input" type="password" placeholder="Enter Password" />
-            <a href="changeitlater">Forgot Password?</a>
+            <Link to="/a">Forgot Password?</Link>
           </div>
-          <button className="nav_button">LOGIN</button>
+
+          <Link to="/profile" className="nav_button">LOGIN</Link>
           <button className="nav_mobilebutton">SIGN UP</button>
         </div>
       </div>

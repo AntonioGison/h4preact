@@ -1,19 +1,21 @@
-import React from "react";
-import './App.css';
-import Navbar from '../Navbar/Navbar';
-import Body from '../Body/Body';
-import Howitworks from '../Howitworks/Howitworks';
-import Footer from "../Footer/Footer";
 
-function App() {
+import './App.css';
+import Home from "../Home/Home";
+import Navbar from "../Navbar/Navbar";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Profile from '../Profile/Profile';
+
+const App = () => {
   return (
-    <div>
-        <Navbar />
-        <Body />
-        <Howitworks />
-        <Footer />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

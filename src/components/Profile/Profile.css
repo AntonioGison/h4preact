@@ -1,0 +1,12 @@
+:root {
+    --very-dark-bg: #09062A;
+    --light-color: #ffffff;
+    --dark-bg: #25215A;
+    --dark-blue: #3B3677;
+}
+
+
+.background-dark{
+    background-color: var(--dark-bg);
+    height: 200vh;
+}
