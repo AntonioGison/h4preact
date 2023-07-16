@@ -1,8 +1,26 @@
-.minibox{
+.badge{
+    /* background-image: ; */
+    background-image: url(./badges/badge_bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 9rem;
+    width: 110px;
     display: flex;
-    justify-items: center;
-    width: 50%;
-    height: 50%;
-    border: 1px red solid;
-    margin-left: 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 2%;
+    
+}
+
+.locked{
+    filter: grayscale(100%);
 }

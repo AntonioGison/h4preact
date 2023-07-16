@@ -69,11 +69,11 @@ function User() {
     <div className='user_col user_row padding60 mobileonly'>
 
       <img src={antonioImage} alt="Hack4Pizza" className='user_img' />
-
       <div>
         <div className='user_row'>
         <h1>Antonio</h1>
         <button id="button" className="open-form-button" onClick={openForm}>Settings</button>
+
         </div>
      
         <br></br>
