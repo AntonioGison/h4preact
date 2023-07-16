@@ -4,7 +4,7 @@ import antonioImage from './antonio.jpeg';
 import be from './social_icon/link_behance.svg'
 import dr from './social_icon/link_dribbble.svg'
 import fb from './social_icon/link_facebook.svg'
-import insta from './social_icon/link_instagram.svg'
+import ig from './social_icon/link_instagram.svg'
 import wa from './social_icon/link_whatsapp.svg'
 import './User.css';
 
@@ -21,16 +21,47 @@ function closeForm() {
 
 function User() {
   const [bio, setBio] = useState('This is a bio, empty but always a bio.')
+  const [facebook, setFacebook] = useState('remove it later')
+  const [instagram, setInstagram] = useState('remove it later')
+  const [whatsapp, setWhatsapp] = useState('remove it later')
+  const [behance, setBehance] = useState('remove it later')
+  const [dribbble, setDribbble] = useState('remove it later')
 
   return (
   <div className='user_container'>
     
-    <form id="form" className="form">
+     {/* Settings form */}
+    <form id="form" className="form" >
+      {/* method='post' */}
       <button id="form-bg" className="form-close-button" onClick={closeForm}>X</button>
       <br></br>
+
+      
        <h2>Settings</h2>
+       <div className="center">
+       <label for="bio">Add your bio:</label>
        <input type="text" placeholder="Bio" value={bio} onChange={(e) => setBio( e.target.value)}></input>
+       <br></br>
+       <label for="Socials">Add Behance:</label>
+       <input type="text" placeholder="Behance" value={behance} onChange={ ( e ) => setBehance( e.target.value) }></input>
+       <br></br>
+       <label for="Socials">Add Dribble:</label>
+       <input type="text" placeholder="Dribble" value={dribbble} onChange={ ( e ) => setDribbble( e.target.value) }></input>
+       <br></br>
+       <label for="Socials">Add facebook:</label>
+       <input type="text" placeholder="Facebook" value={facebook} onChange={ ( e ) => setFacebook( e.target.value) }></input>
+       <br></br>
+       <label for="Socials">Add Instagram:</label>
+       <input type="text" placeholder="Instagram" value={instagram} onChange={ ( e ) => setInstagram( e.target.value) }></input>
+       <br></br>
+       <label for="Socials">Add whatsapp:</label>
+       <input type="text" placeholder="Whatsapp" value={whatsapp} onChange={ ( e ) => setWhatsapp( e.target.value) }></input>
+       <br></br>
+       <input type="submit" value="Save"></input>
+      </div>
+      
     </form>
+      {/* Settings form end */}
 
 
 
@@ -39,8 +70,11 @@ function User() {
       <img src={antonioImage} alt="Hack4Pizza" className='user_img' />
 
       <div>
+        <div className='user_row'>
         <h1>Antonio</h1>
         <button id="button" className="open-form-button" onClick={openForm}>Settings</button>
+        </div>
+     
         <br></br>
         <h3>Naples, Italy</h3>
         <h3>Member Since 2019</h3>
@@ -61,11 +95,21 @@ function User() {
             <h2>Social</h2>
             <br></br>
             <div className='user_row'>
-            <img src={be} alt="Hack4Pizza" className='user_icons' />
-            <img src={dr} alt="Hack4Pizza" className='user_icons' />
-            <img src={fb} alt="Hack4Pizza" className='user_icons' />
-            <img src={insta} alt="Hack4Pizza" className='user_icons' />
-            <img src={wa} alt="Hack4Pizza" className='user_icons' />
+
+            { behance ? ( <a href={behance} target="_blank" rel="noopener noreferrer" >
+              <img src={be} className='user_icons' alt="behance Profile" />  </a> ) : null }
+
+            { dribbble ? ( <a href={dribbble} target="_blank" rel="noopener noreferrer" >
+              <img src={dr} className='user_icons' alt="Dribble Profile" />  </a> ) : null }
+
+            { facebook ? ( <a href={facebook} target="_blank" rel="noopener noreferrer" >
+              <img src={fb} className='user_icons' alt="Facebook Profile" />  </a> ) : null }
+
+            { instagram ? ( <a href={instagram} target="_blank" rel="noopener noreferrer" >
+              <img src={ig} className='user_icons' alt="Instagram Profile" />  </a> ) : null }
+
+            { whatsapp ? ( <a href={whatsapp} target="_blank" rel="noopener noreferrer" >
+              <img src={wa} className='user_icons' alt="Whatsapp Profile" />  </a> ) : null }
             
 
             </div>

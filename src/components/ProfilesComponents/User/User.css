@@ -11,13 +11,17 @@
     margin: auto;
     text-align: center;
   }
+  .center{
+    margin-top: 5%;
+  }
+
   .form-show {
     display: block;
   }
   .open-form-button {
     background-color: var(--dark-blue) ;
     height: 25px;
-    border: 1px red solid;
+    border: 1px var(--very-dark-bg) solid;
     text-align: center;
     text-decoration: none;
   }
@@ -62,7 +66,7 @@
 
 
 .lilla {
-    color: #8883CC;
+    color: var(--placeholder);
 }
 
 .bio {
