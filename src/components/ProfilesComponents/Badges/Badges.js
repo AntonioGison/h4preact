@@ -9,24 +9,28 @@ function Badges() {
       url: require('./badges/1.svg').default,
       name: "1st place",
       unlocked: true,
+      howManyTimesUnlocked: 1,
     },
     {
       id: 2,
       url: require('./badges/2.svg').default,
       name: "2nd place",
       unlocked: true,
+      howManyTimesUnlocked: 1,
     },
     {
       id: 3,
       url: require('./badges/3.svg').default,
       name: "3rd place",
       unlocked: true,
+      howManyTimesUnlocked: 1,
     },
     {
       id: 4,
       url: require('./badges/12.svg').default,
       name: "here 4 pizza",
       unlocked: true,
+      howManyTimesUnlocked: 1,
     }
     ,
     {
@@ -34,12 +38,14 @@ function Badges() {
       url: require('./badges/22.svg').default,
       name: "Early Adopter",
       unlocked: false,
+      howManyTimesUnlocked: 1,
     },
     {
       id: 6,
       url: require('./badges/3.svg').default,
       name: "here 4 pizza",
       unlocked: false,
+      howManyTimesUnlocked: 1,
     }
     ,
     {
@@ -47,6 +53,7 @@ function Badges() {
       url: require('./badges/3.svg').default,
       name: "3rd place",
       unlocked: false,
+      howManyTimesUnlocked: 1,
     }
     ,
     {
@@ -54,6 +61,7 @@ function Badges() {
       url: require('./badges/3.svg').default,
       name: "3rd place",
       unlocked: false,
+      howManyTimesUnlocked: 1,
     }
   ];
 
@@ -67,13 +75,14 @@ function Badges() {
     return 0; // no change in order
   });
   
+  const filtredBadges = sortedBadges.slice(0, 8);
 
   return (
     <div className='minibox'>
     <h2>Badges</h2>
     <hr/>
     <div className='badge_container'>
-      {sortedBadges.map((badge) => (
+      {filtredBadges.map((badge) => (
         <div key={badge.id} className='badge'>
           {badge.unlocked ? (
             <>
