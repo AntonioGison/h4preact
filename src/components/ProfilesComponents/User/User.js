@@ -9,7 +9,8 @@ import wa from './social_icon/link_whatsapp.svg'
 import './User.css';
 
 /*Function to open and close settings */
-function openForm() {
+function openForm(e) {
+  e.preventDefault(); 
   document.getElementById("form").classList.toggle("form-show");
   document.getElementById("form-bg").style.display = "block";
 }
@@ -17,7 +18,9 @@ function closeForm() {
   document.getElementById("form").classList.toggle("form-show");
   document.getElementById("form-bg").style.display = "none";
 }
-
+const handleSubmit = (e) => {
+  e.preventDefault();
+};
 
 function User() {
   const [bio, setBio] = useState('This is a bio, empty but always a bio.')
@@ -31,7 +34,7 @@ function User() {
   <div className='user_container'>
     
      {/* Settings form */}
-    <form id="form" className="form" >
+    <form id="form" className="form"  onSubmit={handleSubmit} >
       {/* method='post' */}
       <button id="form-bg" className="form-close-button" onClick={closeForm}>X</button>
       <br></br>
