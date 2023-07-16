@@ -1,8 +1,8 @@
 import React from 'react'
-
+import './Performance.css'
 function Performance() {
   return (
-    <div>Performance</div>
+    <div className='minibox'>Performance</div>
   )
 }
 

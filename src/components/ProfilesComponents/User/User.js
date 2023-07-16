@@ -39,26 +39,27 @@ function User() {
       
        <h2>Settings</h2>
        <div className="center">
-       <label for="bio">Add your bio:</label>
-       <input type="text" placeholder="Bio" value={bio} onChange={(e) => setBio( e.target.value)}></input>
-       <br></br>
-       <label for="Socials">Add Behance:</label>
-       <input type="text" placeholder="Behance" value={behance} onChange={ ( e ) => setBehance( e.target.value) }></input>
-       <br></br>
-       <label for="Socials">Add Dribble:</label>
-       <input type="text" placeholder="Dribble" value={dribbble} onChange={ ( e ) => setDribbble( e.target.value) }></input>
-       <br></br>
-       <label for="Socials">Add facebook:</label>
-       <input type="text" placeholder="Facebook" value={facebook} onChange={ ( e ) => setFacebook( e.target.value) }></input>
-       <br></br>
-       <label for="Socials">Add Instagram:</label>
-       <input type="text" placeholder="Instagram" value={instagram} onChange={ ( e ) => setInstagram( e.target.value) }></input>
-       <br></br>
-       <label for="Socials">Add whatsapp:</label>
-       <input type="text" placeholder="Whatsapp" value={whatsapp} onChange={ ( e ) => setWhatsapp( e.target.value) }></input>
-       <br></br>
-       <input type="submit" value="Save"></input>
-      </div>
+  <label htmlFor="bio">Add your bio:</label>
+  <input id="bio" type="text" placeholder="Bio" value={bio} onChange={(e) => setBio(e.target.value)}></input>
+  <br></br>
+  <label htmlFor="behance">Add Behance:</label>
+  <input id="behance" type="text" placeholder="Behance" value={behance} onChange={(e) => setBehance(e.target.value)}></input>
+  <br></br>
+  <label htmlFor="dribbble">Add Dribble:</label>
+  <input id="dribbble" type="text" placeholder="Dribble" value={dribbble} onChange={(e) => setDribbble(e.target.value)}></input>
+  <br></br>
+  <label htmlFor="facebook">Add Facebook:</label>
+  <input id="facebook" type="text" placeholder="Facebook" value={facebook} onChange={(e) => setFacebook(e.target.value)}></input>
+  <br></br>
+  <label htmlFor="instagram">Add Instagram:</label>
+  <input id="instagram" type="text" placeholder="Instagram" value={instagram} onChange={(e) => setInstagram(e.target.value)}></input>
+  <br></br>
+  <label htmlFor="whatsapp">Add Whatsapp:</label>
+  <input id="whatsapp" type="text" placeholder="Whatsapp" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)}></input>
+  <br></br>
+  <input type="submit" value="Save"></input>
+</div>
+
       
     </form>
       {/* Settings form end */}

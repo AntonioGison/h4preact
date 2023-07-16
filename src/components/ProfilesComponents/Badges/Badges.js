@@ -1,8 +1,9 @@
 import React from 'react'
+import './Badges.css'
 
 function Badges() {
   return (
-    <div>Badges</div>
+    <div className='minibox'>Badges</div>
   )
 }
 
