@@ -10,11 +10,11 @@ function Navbar() {
         <img src={require("./logo.svg").default} alt="Hack4Pizza" />
       </Link>
       <div className="nav_right">
-        <input className="nav_input" type="email" placeholder="Enter Email address" />
+        <input id="email" className="nav_input" type="email" placeholder="Enter Email address" />
 
         <div className="nav_container">
           <div className="nav_passcontainer">
-            <input className="nav_input" type="password" placeholder="Enter Password" />
+            <input id="password" className="nav_input" type="password" placeholder="Enter Password" />
             <Link to="/a">Forgot Password?</Link>
           </div>
 
