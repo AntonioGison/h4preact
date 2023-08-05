@@ -18,6 +18,8 @@ function closeForm() {
   document.getElementById("form").classList.toggle("form-show");
   document.getElementById("form-bg").style.display = "none";
 }
+
+//dont forget to add logic here
 const handleSubmit = (e) => {
   e.preventDefault();
 };

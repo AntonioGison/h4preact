@@ -77,6 +77,17 @@ function Badges() {
   
   const filtredBadges = sortedBadges.slice(0, 8);
 
+/*Function to open and close badges */
+function openBadge(e) {
+  e.preventDefault(); 
+  document.getElementById("badge_list").classList.toggle("form-show");
+  document.getElementById("form-bg2").style.display = "block";
+}
+function closeBadge() {
+  document.getElementById("badge_list").classList.toggle("form-show");
+  document.getElementById("form-bg2").style.display = "none";
+}
+
   return (
     <div className='minibox auto'>
     <h2>Badges</h2>
@@ -97,6 +108,32 @@ function Badges() {
           )}
         </div>
       ))}
+      
+    </div>
+    <button className='show_more' onClick={openBadge}>Show More</button>
+
+    <div id="badge_list" className='badge_list'>
+    <button id="form-bg2" className="close-button" onClick={closeBadge}>X</button>
+    <div className='badge_popup'>
+    {
+      filtredBadges.map((badg) =>(
+        <div key={badg.id} className='badge'>
+          {badg.unlocked ? (
+            <>
+              <p>{badg.name}</p>
+              <img src={badg.url} alt={badg.name} width={100} />
+            </>
+          ) : (
+            <>
+            <p>{badg.name}</p>
+            <img src={badg.url}  className='locked' alt={badg.name} width={100} />
+          </>
+          )}
+        </div>
+
+      ))
+    }
+    </div>
     </div>
   </div>
   )

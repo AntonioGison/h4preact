@@ -24,3 +24,48 @@
 .locked{
     filter: grayscale(100%);
 }
+
+.show_more{
+    border: none;
+    background: none;
+    text-align: center;
+    border: 1px var(--very-dark-bg) solid;
+    width: 50%;
+    margin: auto;
+    margin-top: 1%;
+}
+
+ .badge_list {
+    display: none; 
+    background-color: var(--dark-blue);
+    height: 80vh;
+    width: 80vw;
+    position: fixed;
+    z-index: 9999; 
+    top: 5vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  } 
+
+  .close-button {
+    display: none;
+    float: right;
+    width: 50px;
+    height: 50px;
+    z-index: 9999; 
+    text-decoration: none;
+    color: var(--light-color);
+    background-color: var(--very-dark-bg);
+  }
+
+   .form-show {
+    display: block !important;
+  } 
+
+  .badge_popup{
+    z-index: 999;
+    display: flex;
+    padding: 5%;
+  } 
