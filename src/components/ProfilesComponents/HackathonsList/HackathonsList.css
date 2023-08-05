@@ -58,3 +58,20 @@
 .white{
   color: white !important;
 }
+
+@media (max-width: 950px) {
+  .minibox {
+    width: 110% !important;
+  }
+  .list-parent-container {
+    width: 73%;
+  }
+
+  .year-display {
+    top: -15px;
+  }
+
+  .full-width-container{
+    margin-top: 8%;
+  }
+}
