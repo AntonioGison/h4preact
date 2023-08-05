@@ -78,7 +78,7 @@ function Badges() {
   const filtredBadges = sortedBadges.slice(0, 8);
 
   return (
-    <div className='minibox'>
+    <div className='minibox auto'>
     <h2>Badges</h2>
     <hr/>
     <div className='badge_container'>

@@ -1,0 +1,9 @@
+.chart {
+    width: 18em !important;
+    height: 18em !important;
+}
+.performance_center {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}

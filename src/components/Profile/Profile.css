@@ -73,7 +73,7 @@ p {
   margin-top: 4%;
   display: flex;
   flex-direction: column;
-  padding: 4%;
+  padding: 2%;
   justify-items: center;
   width: 50%;
   height: 45vh;
@@ -90,3 +90,4 @@ hr {
   margin-inline-start: 10px;
     margin-inline-end: 10px;
 }
+
