@@ -30,6 +30,16 @@ function HackathonsList() {
       organiser: 'Tech Nation Visa Ambassadors',
       img: require('./hackimg/TN.png'),
     },
+    {
+      id: 4,
+      title: 'SMART CITY HACK DAY',
+      description: 'My first hackathon!',
+      datestart: '16-Jun-2018',
+      dateend: '16-Jun-2018',
+      organiser: 'Tech Nation Visa Ambassadors',
+      img: require('./hackimg/TN.png'),
+      badge: require('../Badges/badges/12.svg').default,
+    },
     
   ];
 
@@ -58,7 +68,7 @@ function HackathonsList() {
             
                 <div key={hack.id}  className='flex_hackathonsList'>
                 <div>
-                  <img src={hack.img} width={100} />
+                  <img src={hack.img} width={100} alt='hackathon' />
                 </div>
 
                 <div className='hackathons_details'>
@@ -68,9 +78,10 @@ function HackathonsList() {
                  <div className='flex_hackathonsList spacer'>
                     <p className='white'>{hack.datestart}</p>
                     <p className='white'>{hack.dateend}</p>
+
                  </div>
-    
                  <p className='white'>{hack.description}</p>
+                 <img src={hack.badge} width={50} alt='badge' />
                 </div>
               </div>
             
