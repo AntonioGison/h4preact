@@ -39,7 +39,7 @@ export const data = {
 
 function Performance() {
   return (
-    <div className='minibox auto performance_center'>
+    <div className='minibox performance_center'>
       <h2>Performance</h2>
       <hr/>
       <Radar data={data} className='chart'/> 

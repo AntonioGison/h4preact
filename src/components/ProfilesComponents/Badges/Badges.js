@@ -89,7 +89,7 @@ function closeBadge() {
 }
 
   return (
-    <div className='minibox auto'>
+    <div className='minibox'>
     <h2>Badges</h2>
     <hr/>
     <div className='badge_container'>

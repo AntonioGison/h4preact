@@ -77,6 +77,11 @@ p {
     h3{
         font-size: 0.7em;
       }
+
+    .minibox{
+      height: auto !important;
+      width: 110% !important;
+    }
 }
   
 

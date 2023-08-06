@@ -19,9 +19,6 @@
     padding: 1% 5%;
   }
   
-  .auto{
-    height: auto;
-  }
 
 .year-display{
     position: relative;
@@ -60,9 +57,6 @@
 }
 
 @media (max-width: 950px) {
-  .minibox {
-    width: 110% !important;
-  }
   .list-parent-container {
     width: 73%;
   }
