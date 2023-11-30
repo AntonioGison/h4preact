@@ -6,7 +6,8 @@ const validInfo = require('../middleware/validinfo');
 const authorization = require('../middleware/authorization');
 
 //Register
-router.post("/register", validInfo, async (req, res) => {
+router.post("/register",  async (req, res) => {
+
     const { email, name, password } = req.body;
   
     try {
@@ -14,20 +15,23 @@ router.post("/register", validInfo, async (req, res) => {
         email
       ]);
   
-      if (user.rows.length > 0) {
-        return res.status(401).json("User already exist!");
-      }
+
+      res.json(user.rows);
+
+    //   if (user.rows.length > 0) {
+    //     return res.status(401).json("User already exist!");
+    //   }
   
-      const salt = await bcrypt.genSalt(10);
-      const bcryptPassword = await bcrypt.hash(password, salt);
+    //   const salt = await bcrypt.genSalt(10);
+    //   const bcryptPassword = await bcrypt.hash(password, salt);
   
-      let newUser = await pool.query(
-        "INSERT INTO users (user_name, user_email, user_password) VALUES ($1, $2, $3) RETURNING *",
-        [name, email, bcryptPassword]
-      );
+    //   let newUser = await pool.query(
+    //     "INSERT INTO users (user_name, user_email, user_password) VALUES ($1, $2, $3) RETURNING *",
+    //     [name, email, bcryptPassword]
+    //   );
   
-     const token = jwtGenerator(newUser.rows[0].user_id);
-     res.json({ token });
+    //  const token = jwtGenerator(newUser.rows[0].user_id);
+    //  res.json({ token });
     //   return await res.json(newUser.rows[0]);
     } catch (err) {
       console.error(err.message);

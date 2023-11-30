@@ -4,7 +4,7 @@ const cors = require('cors');
 
 //middleware
 
-app.use(express.json());
+app.use(express.json()); //req.body
 app.use(cors());
 
 
