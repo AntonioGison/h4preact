@@ -5,34 +5,50 @@ const jwtGenerator = require('../utils/jwtGenerator');
 const validInfo = require('../middleware/validinfo');
 const authorization = require('../middleware/authorization');
 
-//Register
+// //Register
+// router.get("/test", async (req, res) => {
+//     try {
+//         const result = await pool.query("SELECT 1");
+//         res.json({ message: "Database connection successful", result: result.rows });
+//     } catch (error) {
+//         console.error(error.message);
+//         res.status(500).json({ error: "Database connection error" });
+//     }
+// });
+
+
+
 router.post("/register",  async (req, res) => {
 
-    const { email, name, password } = req.body;
   
     try {
+
+      console.log("Received registration request");
+
+      const { email, name, password } = req.body;
+      
       const user = await pool.query("SELECT * FROM users WHERE user_email = $1", [
         email
       ]);
   
+      if (user.rows.length !== 0) {
+        return res.status(401).json("User already exist!");
+      }
 
-      res.json(user.rows);
 
-    //   if (user.rows.length > 0) {
-    //     return res.status(401).json("User already exist!");
-    //   }
   
-    //   const salt = await bcrypt.genSalt(10);
-    //   const bcryptPassword = await bcrypt.hash(password, salt);
+      const salt = await bcrypt.genSalt(10);
+      const bcryptPassword = await bcrypt.hash(password, salt);
   
-    //   let newUser = await pool.query(
-    //     "INSERT INTO users (user_name, user_email, user_password) VALUES ($1, $2, $3) RETURNING *",
-    //     [name, email, bcryptPassword]
-    //   );
+      let newUser = await pool.query(
+        "INSERT INTO users (user_name, user_email, user_password) VALUES ($1, $2, $3) RETURNING *",
+        [name, email, bcryptPassword]
+      );
   
-    //  const token = jwtGenerator(newUser.rows[0].user_id);
-    //  res.json({ token });
-    //   return await res.json(newUser.rows[0]);
+     const token = jwtGenerator(newUser.rows[0].user_id);
+     res.json({ token });
+      return await res.json(newUser.rows[0]);
+
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server error");
