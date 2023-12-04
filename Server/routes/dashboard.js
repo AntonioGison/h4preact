@@ -3,11 +3,11 @@ const pool = require("../db");
 const authorization = require('../middleware/authorization');
 //dashboard route
 
-router.get('/', async (req, res) => {
+router.get('/', authorization , async (req, res) => {
     try {
         
         //res.json(req.user);
-        const user = await pool.query("SELECT * FROM users WHERE user_id = $1", [req.user]);
+        const user = await pool.query("SELECT * FROM users WHERE user_id = $1", [req.user.id] );
 
         res.json(user.rows[0]);
         
