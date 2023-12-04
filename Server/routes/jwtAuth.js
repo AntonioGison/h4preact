@@ -47,7 +47,7 @@ router.post("/register",  async (req, res) => {
   
      const token = jwtGenerator(newUser.rows[0].user_id);
      res.json({ token });
-      return await res.json(newUser.rows[0]);
+      //return await res.json(newUser.rows[0]);
 
     } catch (err) {
       console.error(err.message);
@@ -77,7 +77,6 @@ router.post("/login", validInfo, async (req, res) => {
     if(!validPassword){
         return res.status(401).json("password is incorrect");
     }
-    console.log(validPassword);
     //give them the jwt token
     
     const token = jwtGenerator(user.rows[0].user_id);
