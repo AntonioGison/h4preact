@@ -5,28 +5,18 @@ const jwtGenerator = require('../utils/jwtGenerator');
 const validInfo = require('../middleware/validinfo');
 const authorization = require('../middleware/authorization');
 
-// //Register
-// router.get("/test", async (req, res) => {
-//     try {
-//         const result = await pool.query("SELECT 1");
-//         res.json({ message: "Database connection successful", result: result.rows });
-//     } catch (error) {
-//         console.error(error.message);
-//         res.status(500).json({ error: "Database connection error" });
-//     }
-// });
-
-
-
-router.post("/register",  async (req, res) => {
+router.post("/register", validInfo,  async (req, res) => {
 
   
     try {
 
       console.log("Received registration request");
 
+
+      // 1 descructure req.body
       const { email, name, password } = req.body;
       
+      //2 check if the user is already registered
       const user = await pool.query("SELECT * FROM users WHERE user_email = $1", [
         email
       ]);
@@ -36,18 +26,19 @@ router.post("/register",  async (req, res) => {
       }
 
 
-  
+      //3 bycrypt the user password
       const salt = await bcrypt.genSalt(10);
       const bcryptPassword = await bcrypt.hash(password, salt);
   
+      //4 insert the user into the database
       let newUser = await pool.query(
         "INSERT INTO users (user_name, user_email, user_password) VALUES ($1, $2, $3) RETURNING *",
         [name, email, bcryptPassword]
       );
   
+      //5 generate jwtoken
      const token = jwtGenerator(newUser.rows[0].user_id);
      res.json({ token });
-      //return await res.json(newUser.rows[0]);
 
     } catch (err) {
       console.error(err.message);

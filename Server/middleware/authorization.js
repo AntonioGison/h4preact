@@ -11,7 +11,11 @@ module.exports = async (req, res, next) => {
 
         
         const payload = jwt.verify(jwtToken, process.env.jwtSecret);
+
+        //we have the user id and now we can use it to query stuff we need
         req.user = payload.user;
+
+        console.log(req.user);
 
         next();
     } catch (error) {
