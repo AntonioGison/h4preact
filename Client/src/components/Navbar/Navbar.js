@@ -2,7 +2,9 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({authState}) {
+  const { isAuthenticated, setIsAuthenticated } = authState;
+
   return (
     <nav>
   
@@ -17,7 +19,19 @@ function Navbar() {
             <input id="password" className="nav_input" type="password" placeholder="Enter Password" />
             <Link to="/a">Forgot Password?</Link>
           </div>
-          <Link to="/profile" className="nav_button">LOGIN</Link>
+          <>
+          {
+          isAuthenticated ? (
+            <Link to="/" onClick={() => setIsAuthenticated(false)} className="nav_button">
+              LOGOUT
+            </Link>
+            ) : (
+            <Link to="/profile" onClick={() => setIsAuthenticated(true)} className="nav_button">
+              LOGIN
+            </Link>
+          )}
+          </>
+         
           <button className="nav_mobilebutton">SIGN UP</button>
         </div>
       </div>
