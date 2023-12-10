@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Body.css";
 
 function Body() {
+
+const [inputs, setInputs] = useState({ firstNa})
+
+
+
   return (
     <div className="background">
       <img className="body_hero"
@@ -12,15 +17,15 @@ function Body() {
       <div className="body_right">
           <p className="font">Hack. Win. Collect.</p>
     <form>
-         <input className="body_input" type="text" id="first-name" name="first-name" placeholder="First Name" required />
-         <input  className="body_input" type="text" id="last-name" name="last-name" placeholder="Last Name" required />
-        <br/>
+         <input className="body_input" type="text" id="name" name="name" placeholder="Name" required />
         <input className="body_input"  type="email" id="email" name="email" placeholder="Email Address" required />
          <br/>
         <input className="body_input"  type="password" id="password" name="password" placeholder="Password" required />
          <input  className="body_input" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required />
         <br/>
         <input className="body_input"  type="text" id="city" name="city" placeholder="City" required />
+        <input className="body_input"  type="text" id="country" name="country" placeholder="Country" required />
+
         <br/>
         <div className="body_terms">
         <input type="checkbox" id="terms" name="terms" value="terms"/>
